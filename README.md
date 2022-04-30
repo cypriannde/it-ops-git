@@ -1,1 +1,0 @@
-# it-ops-git
