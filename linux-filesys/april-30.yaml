@@ -3,14 +3,14 @@
 
   /Root Directory: the root directory is simply the (home directory) where all user files are stored.
 
-    /Bin Diorectory: Essential command binaries  (programs) are stored here that is  are ready to run programs that must be available in order to maintain functionality for the purposes of booting (i.e starting) and repairing a system.
+    /Bin Directory: Essential command binaries  (programs) are stored here that are ready to run programs that must be available in order to maintain functionality for the purposes of booting (i.e starting) and repairing a system.
 
-    /ETC Directory: Host-specific system configuration files. This directory is contained in the root directory. It stores storage sytem configuration files, executables required to boot the system, and some log files.
+    /ETC Directory: Host-specific system configuration files. This directory is contained in the root directory. It stores storage system configuration files, executables required to boot the system, and some log files.
 
-   /Home Directory: Location of users' personal home  directories (e.g. /home/cyprian). So this directory is intended to contain the user's files; incljuding documents, music, pictures etc.
-       ->Examples of home directoriers: user1, user2, etc
+   /Home Directory: Location of users' personal home  directories (e.g. /home/cyprian). So this directory is intended to contain the user's files; including documents, music, pictures etc.
+       ->Examples of home directories: user1, user2, etc
    
-    /Opt Directory: Optional or third party software. so this directory is reserved forn all the software and add-on packages that are not part of the default installation. example,(staroffice, netscape communicator packages are normally found here).
+    /Opt Directory: Optional or third-party software. so this directory is reserved for all the software and add-on packages that are not part of the default installation. For example,(StarOffice, Netscape communicator packages are normally found here)
 
     /Data Directory: The purpose of a data directory is to identify the master source of specific data along with replicas of that data in the distributed database environment.
 
@@ -20,3 +20,8 @@
 
     /tmp directory: --> All users have permission to place temporary files here or still write here.
     /lib directory: -->  This is where essential shared libraries && kernel modules are stored.
+
+
+# Linux tip
+history | gre <idea>
+history | grep add 
