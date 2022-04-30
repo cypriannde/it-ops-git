@@ -25,3 +25,13 @@
 # Linux tip
 history | gre <idea>
 history | grep add 
+
+# Command to delete a file
+rm <filename>
+ex: rm file2
+# command to delete a folder/directory
+rm == remove
+r == recursively, delete the code that prevents from deleting this dir
+f == force, do not ask me to say yes
+rm -rf <direc>
+ex: rm -rf dir2
