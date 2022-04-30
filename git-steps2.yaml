@@ -1,0 +1,50 @@
+#step1
+Open my local IDE --> Intergrated Development Enviroment
+  Open what you use, it could be vscode, notepad++ sublimetext etc
+
+# Step2
+ Open a terminal
+
+# Step 3
+Change to your home/Documents Dir
+  cd ~/Documents
+
+# Step 4
+Create a temporary directory and change into that directory
+  mkdir tmp && cd tmp
+
+# Step 5, 
+  - open your browser
+  - Go to your github repo
+  - Go to the directory's home page
+  - Go to code and choose ssh, copy the link
+  - Come to your local device
+  - Clone the repo the repo here
+
+    git clone git@github.com:cypriannde/it-ops-git.git
+
+# Step 6
+Chnage into the clone repo
+  cd it-ops-git
+  
+# Step 7
+- make your noes, --> anew file
+- Choose save as
+- navigate to the direcctory where you want to save the file
+
+
+# Step 8
+Do a git status, to ensure that git has a copy of the new file
+  git status
+
+- Push the updates to github
+  git add <filename> --> to add a single file that is untracked by git
+  git add -A --> add all the files that are untracked by git
+  git commit -m "updating or adding this & so file"
+  git push
+
+  # wait for it to upload
+  # Adding content
+
+
+
