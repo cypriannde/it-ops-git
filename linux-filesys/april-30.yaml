@@ -1,0 +1,22 @@
+# Assigment: 
+# funtions Of directories in the filesystem:
+
+  /Root Directory: the root directory is simply the (home directory) where all user files are stored.
+
+    /Bin Diorectory: Essential command binaries  (programs) are stored here that is  are ready to run programs that must be available in order to maintain functionality for the purposes of booting (i.e starting) and repairing a system.
+
+    /ETC Directory: Host-specific system configuration files. This directory is contained in the root directory. It stores storage sytem configuration files, executables required to boot the system, and some log files.
+
+   /Home Directory: Location of users' personal home  directories (e.g. /home/cyprian). So this directory is intended to contain the user's files; incljuding documents, music, pictures etc.
+       ->Examples of home directoriers: user1, user2, etc
+   
+    /Opt Directory: Optional or third party software. so this directory is reserved forn all the software and add-on packages that are not part of the default installation. example,(staroffice, netscape communicator packages are normally found here).
+
+    /Data Directory: The purpose of a data directory is to identify the master source of specific data along with replicas of that data in the distributed database environment.
+
+    /USR Directory: this is one of the most important directories in the system as it contains all the user binaries, their documentation, libraries, header files, etc. So is the base directory for most shareable, read-only data.
+
+    /VAR Directory: Simply known as [variable data] is a standard subdirectory of the root directory in Linux and other Unix-like operating systems that contains files to which the system writes data during the course of its operation e.g mail and printer spools, lock files log files, stc.
+
+    /tmp directory: --> All users have permission to place temporary files here or still write here.
+    /lib directory: -->  This is where essential shared libraries && kernel modules are stored.
