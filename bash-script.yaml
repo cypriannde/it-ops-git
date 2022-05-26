@@ -25,4 +25,12 @@ We got to note that a bash script is just command line commands
 
  now if we run (ls) we will see what it list all the files and folders and what you will is that the script we just created has just the permission to (-rw-r--r--), it can only read, write, read and read nor rights to execute. meaning the user has rights to read and write does not have the rights to execute while groups can only (read), and others (read) only. now what happens we have to apply the (chmode) command so we can pass this script the rights to run and is the command --> (chmod +x hidad.sh). so note the (+X) is simply adding executable permissions to that file
     So now after we run this command the file has the rights to execute now.  Now i run (./hidad.sh) and it automatically runs now without any issues at all.
-  
+   
+
+
+
+
+
+
+
+   
