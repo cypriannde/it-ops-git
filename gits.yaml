@@ -1,0 +1,297 @@
+	
+# June 11, 2022	
+	# Topic Git
+	
+	What is git:
+	Git a version control system
+	It is free and open source
+	It is the most widely used system in software development today
+	
+	What is a git branch:
+	What  is a repository:
+	It is a folder that we stores files that contain information
+	It could be a folder or file
+	It could be remote, in a different location or local, that is it is in your current location
+	
+	
+	# Article about git
+	# https://codeburst.io/git-from-zero-to-hero-basics-9d8705f3b7dd
+	
+	Definition of Git:
+	Basically Git is a distributed version control system for tracking changes in source code during software development.
+	
+	What is a distributed version control system:
+	Version control is basically a system that records changes to a file or set of files over time so that you can recall specific versions later. And distributed means that complete codebase — including its full version history — is mirrored on every developer’s computer.
+	
+	What are the public git hosting services:
+	- Github
+	- Bitbucket
+	- Gitlabs
+	
+	The basic difference one should understand is that
+	* process --> version control management
+	* Git is a tool
+	* GitHub, Gitlabs, bitbucket (and other hosting platforms) is a service.
+	
+	Three-stage architecture:
+	working directory: simply refers to the folder in which the files are stored
+	
+	staging area: is the place where we store the files which will go in the next commit. If we make some error in a file we can avoid staging that file alone also
+	
+	Git directory: is a .git folder which is a hidden folder that stores compressed files and allocates proper version of your project according to your command
+	- The . git folder contains all the information that is necessary for your project in version control and all the information about commits, remote repository address, etc. All of them are present in this folder. It also contains a log that stores your commit history so that you can roll back to history.
+	
+	
+	#install git in ubuntu 20:04
+	# check if you have git
+	git --version
+	
+	output: git version 2.25.1
+	
+	if you have an output like that, then you have git, the version might be different
+	
+	If you do not have git, run this command
+	sudo apt update && sudo apt install git -y
+	
+	Initializing Git:
+	First, to get started, you need to run the command git init.
+	$ git init
+	
+	Adding Files to share:
+	Before sharing the file we have to select the file to be shared and to select the files we use the command git add.
+	$ git add file_name
+	
+	To add all the files in the folder you can use
+	
+	$ git add .
+	
+	Saving the added files:
+	To save the selected file in; we use the git commit command.
+	
+	$ git commit -m commit message
+	
+	A snapshot is created when we make a commit.
+	Saving the changes = Making a commit
+	A good commit message should explain the changes made in the file and should be short.
+	
+	To edit a commit message
+	To edit the commit message we can use the following command
+	$ git commit --amend -m New message
+	
+	Checking status of the file:
+	To check the status of the files we use the git status command. It will show the untracked, unmodified, modified, etc files.
+	
+	$ git status
+	
+	Viewing the commit history:
+	To view the commit history we can use the git log command.
+	
+	$ git log
+	
+	To view the changes we can use the git log -p command
+	
+	$ git log -p
+	
+	To quit we can press the
+	Q key.
+	
+	
+	To view the last n changes we can use the following syntax (n= any-number)
+	$ git log -p -n
+	
+	
+	To view the commit in a single line, we can use the below command.
+	$ git log --pretty=oneline
+	
+	
+	
+	Adding a remote repository:
+	Some important terms to know before using the command:
+	Repository: A repository is like a folder for your project. Your project’s repository will contain all of your project’s files.
+	
+	Remote Repositories: Remote repositories are versions of your project that are hosted online or anywhere else other than your local enviroment
+	
+	Git uses the remote repository to store the shared file.
+	
+	To add a remote repository git remote add command is used and for that, a remote URL is also required. We can easily get the remote URL from hosting platforms like GitHub.
+	
+	$ git remote add remote_name URL
+	
+	To check the remote name use the below command
+	
+	$ git remote
+	
+	Uploading files to a remote:
+	After making the changes to the repository we need to upload the files so that developers can work on it. And to upload the files to a remote we use the push command.
+	
+	
+	$ git push remote_name master
+	
+	Downloading Files from a Remote:
+	To get the latest copy of the repository we download the files. To download the files from a remote we can use the pull command.
+	$ git pull remote_name branch_name
+	
+	
+	Downloading a git repository:
+	We can create an identical copy of a Git Remote Repository to the local machine by using the clone command.
+	
+	$ git clone remote_URL
+	
+	You can also give the remote repository a name of your choice by using the following syntax
+	
+	$ git clone remote_URL folder_name
+	
+	
+	## Continuation
+	# https://codeburst.io/git-from-zero-to-hero-a-level-higher-ab5643b52bb
+	
+	
+	
+	File Status Lifecycle:
+	
+	untracked
+	--->
+	unmodified
+	--->
+	modified
+	--->
+	staged
+	<-----
+	<-----
+	
+	Branching:
+	A branch in git is a movable pointer that points to the snapshot of your changes. It is an independent line where the development work takes place. Every time you commit, the master branch pointer moves forward automatically. The default branch name in git is the master branch.
+	
+	Merge conflicts:
+	A merge conflict is an event that occurs when Git is unable to automatically resolve differences in code between two commits.
+	
+	Merge conflicts can happen when merging a branch, rebasing a branch, or cherry-picking a commit.
+	
+	.gitignore:
+	If you create a file in your repository named .gitignore, git uses it to determine which files and directories to ignore before you make a commit.
+	
+	Let’s see some more commands
+	Remove files:
+	To remove the files, rm command is used
+	$ git rm file_name
+	
+	Rename files:
+	To rename the files, move(mv) command is used
+	$ git mv original_file_name renamed_file_name
+	
+	Checking the content change in the files:
+	We can use the git diff command to see the changes made in the files. The comparison is made between the working directory and staged files.
+	$ git diff
+	
+	Modified code will be displayed in green and the code before the modification is displayed in red:
+	$ git diff --staged
+	
+	This command is used to compare the last commit and the staging area.
+	
+	Skipping the staging area:
+	We can directly commit the files without adding it to the staging area. But if there are any untracked files then it will not be added, only tracked and modified files can be added using this command.
+	$ git commit -a -m commit message
+	
+	Untrack files
+	To untrack the file in git cached command is used. This won’t delete the file from the working directory.
+	$ git rm --cached file_name
+	
+	To unstage files:
+	After adding files to the staging area we can unstage the files by using the reset command
+	
+	
+	To unmodify files:
+	We might encounter a situation where we need to unmodify the changes in a files. In those cases, we use the checkout command
+	$ git checkout -- file_name
+	
+	To unmodify multiple files -f is used instead of filename
+	$ git checkout -f
+	
+	Setting alias in Git:
+	We can set shorthand names for git keywords by using the alias command
+	$ git config --global alias.shorthand keyword
+	Example,
+	
+	$ git config --global alias.st status
+	Now instead of status, we can use st in the commands.
+	
+	Creating a new branch:
+	The branch command will create a new branch. Give a meaningful name to the branch preferably it should suit the feature you are working upon.
+	$ git branch branch_name
+	
+	To switch between branches
+	The checkout command will help you to switch to another branch. Make sure to switch branch only after committing the changes.
+	$ git checkout branch_name
+	
+	To create a new branch and switch simultaneously
+	To create a new branch and switch to it we can use the below-mentioned command.
+	$ git checkout -b branch_name
+	
+	This is basically the combination of :
+	
+	$ git branch branch_name
+	$ git checkout branch_name
+	
+	To view the branches:
+	git branch can be used to see all the branch
+	$ git branch
+	
+	To view merged branches:
+	$ git branch --merged
+	
+	To view unmerged branches:
+	$ git branch --no-merged
+	
+	To view all the remote branch
+	$ git branch -a
+	
+	To view the last commit of each branch:
+	$ git branch --v
+	
+	Rename current branch:
+	git branch -m branch_name
+	
+	Delete branches:
+	To delete branch
+	$ git branch -d branch_name
+	
+	If it is not merged an error will be shown which can be solved by using D instead of d:
+	$ git branch -D branch_name
+	
+	
+	Creating a branch in the remote repository:
+	We can create a branch in the remote repository using git with the help of the following command while pushing it into the remote repository.
+	$ git push remote_name branch_name remote_branch_name
+	
+	For example, if the remote name is origin, branch_name is feature and remote_branch_name is master. Then, the commit is written in the following way,
+	$ git push origin feature master
+	
+	Deleting a branch in the remote repository:
+	We can delete a branch in the remote repository using git with the help of the following command while pushing it into the remote repository.
+	$ git push -d remote_name remote_branch_name
+	Merge branche
+	
+	If you are in the master branch then the changes made in some other branch can be brought to the master branch by using the merge command.
+	$ git merge merging_branch
+	
+	Sometimes merge conflicts can occur which has to be removed before merging.
+	
+	Undo a commit:
+	Revert command is used to undo a commit
+	$ git revert commit_id
+	
+	Git Best Practices:
+	1. Always create a new repository for a new project.
+	
+	2. Do not make changes in the master branch, instead create a new branch for every new feature you add.
+	
+	3. And in case of emergency,
+	
+	
+	# Pushing a new branch for the first time
+	git push --set-upstream origin <new-branch-name>
+	
+	git push --set-upstream origin Ditah
+	
+	# Alternatively, we can use -u
+	git push -u origin <name-of-branch>
