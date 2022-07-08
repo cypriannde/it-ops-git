@@ -1,0 +1,91 @@
+
+# 07/07/2025
+
+# Assigments
+## Differences between public and private cloud.
+      * Public and private cloud services are often used by businesses to provide reliable, scalable computing power.
+  
+# What Is A Public Cloud:
+
+    A public cloud is a type of computing in which a service provider makes resources available to the public via the internet. Resources vary by provider but may include storage capabilities, applications, or virtual machines. Public clouds allows scalability and resource sharing.
+
+      * Some public cloud providers offer resources for free, while clients pay for other resources by subscription or pay per usage model. Cloud services are available to individual users as well, and prices  depending on resource needs. Organizations with huge amounts of data need to develop a cloud migration strategy before choosing a cloud vendor.
+
+# How is public cloud structured:
+ 
+      * The public cloud allows users to share resources while maintaning the privacy of each users data. Public cloud architecture is completely virtualized, providing an enviroment where shared resources are leveraged as needed.
+
+      * A key advantage of public cloud architecture is the ability to access a service or application on any connected device. Because the device itself performs little to no computation, individuals can use highly complex applications almost anywhere.
+
+    Public clouds may be structured differently depending on the type of service being provided. The three most common models on the market today are SaaS, PaaS, and IaaS:
+
+        ! Software as a service (SaaS):
+             * This is a cloud model in which a provider distributes software hosted in the cloud. Users access the SaaS application via the internet. This model eliminates the needs for individual users to install software on their personal machines. It reduces the hardware needs of organization and cuts down on maintenance costs.
+
+        ! Platform as a service (PaaS):
+             * This is a computing model that allows an organization to develop software without needing to maintain the underlying infrastructure. PaaS often includes version control eg ( GitHub) and compile services as well as computing and storage resources.
+
+        ! Infrastructure as a service (IaaS):
+             * This is a model in which an organization outsources their datacenter to a cloud service provider. The provider hosts everything from storage servers to networking hardware and maintains virtualization of the environment. IaaS makes cloud adoption simpler.   The system is often more cost-efficient than purchasing and maintaining hardware on-site.
+
+ Benefits of public cloud:
+
+      * Financially, a public cloud strategy offers organizations a way to grow at scale without accumulating substantial costs. Providers such as Amazon Web Services, Google Cloud, and Microsoft Azure offer per-usage deals that allow organizations to pay only for the resources they use. As an operational cost, public cloud services can protect an organization's budget from high up-front capital investments.
+   
+ #Chalanges of public cloud:
+      * Though public cloud hosts take security very seriously, organizations may choose to protect their data by hosting it on a privately controlled cloud. Established businesses with highlyn specific computational needs may prefer a private model for enhanced optimization of resources.
+
+
+# What Is A Private Cloud:
+   
+    A provate cloud is a computing model that offers a proprietary enviroment dedicated to a single business entit. As with other types of cloud computing environments, private cloud provides extended, virtualized computing resources via physical components stored on-premises or at a vendor's datacenter.
+
+    * One of the chief advantages of a private cloud deployment is the enhanced degree of control offered to the organization. 
+      Because the private cloud is only accessible to a single business, that organization can configure the environment and manage it in a manner that is uniquely tailored to the specific computing needs of the company.
+
+    * A private cloud strategy may be comprised of hardware hosted locally at a facility owned by a business, or it may be hosted by a cloud service provider. Virtual private clouds are typically paid for on a rolling basis, but provisioned hardware and storage configurations maintain the benefits of a secure, exclusive network.
+
+  # Benefits of private clouds:
+     
+     Private cloud solutions bring values to an enterprise by abstracting cloud computing processesin a much more efficient way compared with traditional virtualization
+       
+      * Security and compliance:
+           For businesses operating in heavily regulated industries, compliance is paramount. Private cloud infrastructure gives organizations the ability to comply with strict regulations because sensitive data is held on hardware that cannot be accessed by anyone else. This advantage is available through on-site hardware installations as well as in hosted services.
+
+      * Customization: 
+           Private clouds are fully configurable by the organizations using the solution. A fully private cloud is constructed by an on-site cloud architect, which means stakeholders can specify the exact environment needed to run proprietary applications. Hosted private clouds offer the same advantages but require no on-site setup. In that case, the business works with a vendor to set up and manage a cloud for its exclusive
+
+      * Hybrid integration:
+             When an application needs additional computing resources, hybridization extends the resources of the private cloud into a public cloud to maintain uptime without needing to install additional physical servers. This can be a cost-effective solution for organizations that need the security of a private cloud but still want other functions to operate with the power of a public cloud service.
+
+
+  # Challenges of private cloud:
+
+        A private cloud can introduce challenges if an organization does not have consistent computing needs. When resource demand is in flux, a private cloud may not be able to scale effectively, costing the organization more money in the long run.
+
+     * Up-front costs: 
+             Fully private clouds hosted on-site require a substantial outlay of capital before they can bring value to the organization. The hardware required to run a private cloud can be very expensive and will require an expert cloud architect to set up, maintain, and manage.
+
+      Capacity utilization: 
+            Under the private cloud computing model, the organization is wholly responsible for maximizing capacity utilization. An under-utilized cloud deployment can cost the business significantly.
+
+      * Scalability: 
+            If the business needs additional computing power from the private cloud, it may take extra time and money to scale up the private cloud's available resource. Typically, this process will take longer than scaling a virtual machine or requesting additional resources from a public cloud provider.
+
+# More about private cloud and its services:
+
+     Organizations that are interested in private cloud adoption but dont have access to the capital required to invest in an on-site solution can benefit from working with a private cloud service provider. Some of the biggest names in this space include HPE, Cisco, and Microsoft.
+
+      * Hewlett Packard Enterprise (HPE):
+            This has been a major player in the private and hybrid cloud computing space for years. HPE offers robust services with support for any business need. Clients can choose the hardware and network configurations needed to optimize storage and computing needs.
+
+      * Cisco:
+          Cisco offers on-demand infrastructure, automated container management, and advanced application performance management. Cisco solutions provide data security that moves with workloads to enhance compliance.
+
+      * Microsoft Azure: 
+           Microsoft Azure brings the power of an advanced cloud to any corporate datacenter. Azure is ready for hybridization, which means organizations can take full advantage of compliance offerings while benefiting from the full Azure cloud solution as needed.
+
+          --> Other major private cloud providers include Dell, IBM, VMware, Oracle, and Red Hat. Each provider has a unique set of cloud offerings.
+
+# To learn more about public and private cloud visit the link for references.
+    https://www.citrix.com/en-in/solutions/app-delivery-and-security/what-is-public-cloud.html?
