@@ -1,0 +1,148 @@
+## july, 25/2022
+
+## What Is Bash?:
+
+  Introduction to Bash:
+        Bash is the default Linux shell, a command line interpreter developed by the GNU project. It is the free version of the Bourne Shell. The name is an acronym for the (Bourne-Again Shell).
+
+# Why Bash?:
+         * Bash is a refined command language which enables you to interact with your operating system. You can type commands for Bash to interpret and execute them.
+
+   Stwitching From GUI To CLI:
+         Graphical user interface (GUI) is much easy to use. But is much better to use command line for some tasks like file handling, administrative problems, and data manipulations, etc. Is better to use the best tool to perform a certain task.
+
+# Common Use Cases of Bash:
+        
+    Following are some of the common applications of Bash:
+          * File manipulation
+           * Program execution
+            * Creating your power tools/utilities
+          * Automating command input or entry
+           * Customizing administrative tasks
+            * Creating simple applications
+           * Creating customized power utilities
+            * Printing text
+
+# When not to use Bash?
+        * When you need direct access to system   hardware or external peripherals you cant use Bash
+         * Need data structures, such as linked lists, graphs or trees
+          * Need to generate or manipulate graphics or GUIs
+        * Need native support for multi-dimensional arrays
+         * Need port or socket I/O
+          * Extensive file operations (Bash is limited to serial file access, and that only in a clumsy and inefficient line-by-line fashion)
+        * Where cross-platform portability is required Bash cant be used
+  
+In all these complex areas, it is suggested to use a multifunctional scripting language such as Perl, Python, Ruby or some high-level programming language like C, C++, Java, etc
+
+
+## Introduction To Command Line:
+
+# What Is The Command Line?
+       * A command-line interface (CLI) is a text-based user interface (UI) used to run programs, manage computer files and interact with the computer in the form of progressive and sequential commands.
+
+        CLI has essential advantages, especially for meticulous computer users. It lets you more control over your system by allowing you to run system commands and automate your various tasks. Similarly, you can add modifiers to define exactly how you want your program to execute.
+
+
+# Types:
+     “Shells” have evolved through quite a many adaptations. In OS X and Linux, most commonly used shell is bash, whereas in Windows has MS-DOS based CLI.
+    
+ Open Your Command Line Interface:
+  In Linux:
+    Press Ctrl+Alt+T
+ In OS X:
+  Applications → Utilities → Terminal
+
+In Windows:
+   Press Win-R, type cmd, press Enter
+
+Start → Program Files → Accessories → Command Prompt 
+
+  Observe the Prompt:
+     The command line prompts in different ways for different OS environments.
+         * In Windows: >
+         * In Linux or OS X: $
+
+  Embark on with your First Command :
+        $ whoami:
+
+       This command returns the username of the owner of current login session. So, your computer just printed your name,
+
+## Basic Command Line Editing:
+     * You can use the following key combinations to edit and recall commands:
+       
+        Esc + T: Swap the last two words before the   cursor
+         Ctrl + H: Delete the letter starting at the cursor
+          Ctrl + W: Delete the word starting at the cursor
+         TAB: Auto-complete files, directory, command names and much more
+           Ctrl + R: To see the command history.
+            Ctrl + U: Clear the line
+          Ctrl + C: Cancel currently running commands.
+            Ctrl + L: Clear the screen
+              Ctrl + T: Swap the last two characters before the cursor
+
+# Special Characters in Bash:
+        * Each special character, in Bash, holds a unique meaning. Lets look at this table to find out the meaning of each character
+
+          /:  Directory separator, used to separate a  string of directory names. Example  /home/projects/file
+
+          \: Escape character. If you want to reference a special character, you must “escape” it with a backslash first. Example  \n means newline; \v means vertical tab; \r means return
+
+          #: Lines starting with # will not be executed. These lines are comments
+
+          .: Current directory. When its the first character in a filename, it can also “hide” files
+
+          ..:  Returns the parent directory
+
+           ~: Returns user’s home directory
+
+           ~+: Returns the current working directory. It corresponds to the $PWD internal variable
+
+           ~-: Returns the previous working directory. It corresponds to the $OLDPWD internal variable
+
+           * : Represents 0 or more characters in a filename, or by itself, it matches all files in a directory. 
+             Example: file*2019 can return file2019, file_comp2019, fileMay2019
+           
+           []  This Can be used to represent a range of values, e.g. [0-9], [A-Z], etc. Example: file[3-5].txt represents file3.txt, file4.txt, file5.txt
+
+           | This is  known as “pipe". It redirects the output of the previous command into the input of the next command.
+              Example: ls | less
+           
+           <: It redirects a file as an input to a program. Example  more < file.txt
+
+           > In script name >filename it will redirect the output of “script name” to “file filename”
+            . Overwrite filename if it already exists.  Example: ls > file.txt
+
+           >>:  Redirect and append the output of the command to the end of the file. Example: echo "To the end of file" >> file.txt
+
+            && “AND logical operator”. It returns (success) only if both the linked test conditions are true. It would run the second command only if the first one ran without errors. Example: let "num = (( 0 && 1 ))"; cd/comp/projs && less messages
+
+             ;: “Command separator”. Allows you to execute multiple commands in a single line. Example cd/comp/projs ; less messages
+
+             ? This character serves as a single character in a filename. Example: file?.txt can represent file1.txt, file2.txt, file3.txt
+
+
+## Commands & Arguments:
+     
+   #Command Syntax: 
+   The general syntax followed by any Bash command is:
+      command_name [-option(s)] [argument(s)]
+
+Command Name:
+        A command name is a unique word which is used to indicate to the system what action needs to be performed. Each command has its own set of arguments and options to narrow down the functionality even more. For example, lsis a very commonly used command.
+
+Argument:
+    Any Bash command takes a list of arguments to indicate to the system which objects to look for while performing the action. An argument could be a string, set of string or a token passed to the command. For example, the command ls can take a directory’s path as an argument.
+         > ls /home/user/Downloads/Music
+
+Options:
+    It is a single character carry that carries a unique meaning. Most of the commands run without the option. Some commands can also take multiple sets of options simultaneously. For example, the command ls can take -a as an option which generally means “all” and is used to show hidden files.
+        > ls -a
+
+# Important Points:
+        * Some commands might not take any arguments or options such as pwd
+         * Any option is written with a hyphen (-)
+          * A double hyphen (–) is used to show the end of options if more than one options are used
+        * The order of argument matters sometimes
+        
+     
+
