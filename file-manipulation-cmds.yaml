@@ -1,0 +1,270 @@
+## july 27/2022
+
+## Creat A File In Bash:
+
+# touch:
+     * The touch command is one of the most easiest ways of creating new 
+    files  because it does not overwrite the existing unlike (cp), (rm) etc. 
+     It is also used to change the timestamps of files.
+      A timestamp can be of three types Access Date & Time,
+       Modification Date & Time and the Time & Date when meta information associated with file was changed. 
+       By default, the behavior of this command is set to create empty files only. You can use different options to change file’s timestamp information.
+
+      Syntax:  touch [option] [file_name(s)]
+
+    Options: 
+         Several options can be used together to simultaneously change the timestamp information associated to the file.
+       
+       -am: A is for Access Time and M is for Modification Time. You can change both together by using this option
+
+        -r: Means reference. It makes a reference to another file’s timestamps and use them for your file
+
+        -B: Means Back. This options changes time by going a few seconds back, specified by the user
+
+         -F: Means Forward. This options changes time by going a few seconds forward, specified by the user
+          
+        -d or -t: These two options are used if the user wants to add his/her own access time in a specific format
+
+Examples.
+      * creat a file named "my_file":
+            touch my_file
+             
+        * write a script:
+              echo "Current Directory Files:"
+              ls
+
+               touch my_file
+
+               echo "Updated Directory Files:"
+                ls
+
+  #Run the script: 
+             ./my_file 
+         output:
+             * Current Directory Files:
+               Updated Directory Files:
+               my_file
+
+
+     * Change the Access Time of file named “my_file”. Here, ls -lu displays the access time of all files
+            touch -a my_file
+
+      * Change the Modification Time of the file name. Here, ls -l displays the modification time of all files
+
+
+## Remove a File in Bash
+    
+    # rm:
+      * This command is used to delete files and directories. is is only set to remove files and not directories for safety.
+
+       * Before deleting any file, you must have permissions to delete it. You can delete multiple files at once. This command is almost similar to rmdir
+    
+    # rmdir:
+        * This command is used to delete empty directories only. You can also delete symbolic links to a file, in this way, only link is removed but the file remains unaffected.
+
+  Syntax: rm [options] [file_name(s)]
+
+    Options:
+        To indicate rm the end of options, -- double dashes are used. This is very useful when a directory’s name starts with -
+       
+       -f: Means force. This option tells rm to force delete all the specified files without showing any message
+        
+        -i: Means interactive. This option prompts the user for confirmation before deleting any file
+         
+    -r or -R: Means recursive. It is used to recursively delete diectories by first emptying them and then removing them one by one
+
+# Example:
+       * Delete multiple files at once:
+           rm file_1 file_2 file_3
+
+       * Delete a directory named “my_dir”:
+           rm -r my_dir
+
+
+## Open/Display Content of a File
+
+  wc:
+    This is known as (word count) is used to get word count, newline count, byte and characters count in the files specified in its input.
+
+   Syntax: wc [option] [file]
+
+    Options:
+        -m: Print the character counts.
+        -c: Print the byte counts.
+        -l: Print the newline counts.
+        -w: Print the word counts.
+        -L: Print the length of the longest line.
+
+# Examples:
+      Execute the following example. Here, 6 is the number of lines, 9 is the number of words, and 65 is the number of characters.
+           * wc file.text:
+              output:  6  9 65 file.txt
+
+
+## cat:
+     The cat command short form of concatenation can be used for multiple purpose. 
+      * The three main uses of cat are concatenation, read file and new file creation. Cat is considered one of the most reliable methods to open a file in a read mode and print its content.
+
+  # Syntax: 
+      Concatenation:
+              cat [option] [file_name(s)]
+
+      * runnung the above command it simply prints out the content of the (s) file
+
+   File Reading: 
+        * cat [file_name(s)] // To print contents of file
+
+        * cat [file_name] > [file_name] // To redirect content to another file
+
+        * cat [file_name] | less // To filter the content to be displayed with piping
+
+   File creation: 
+        * cat > [new_file_name]  // To create new file or overwrite if file already exists
+         
+        * cat >> [existing_file_name] // To preserve previous file if it already exists by appending any new text
+
+ # Operators:
+       >  Redirection Operator. Redirects the contents of one file to another
+
+       >>  Append Operator. Appends the content of one file at the end of the other file. Used to prevent overwritting issues.
+
+       |  Piping Operator. Pipes the content of a file if its too large to display
+
+ # Options:
+       -n: Display the contents of file with line numbers
+
+       -E: Concatenate ‘$’ at the end of each line of file
+
+       -T: Replaces tab as ^I
+
+       -v: To show non-printable characters on command line
+
+       -A: Combination of v,E and T
+
+# Examples:
+        * To concatenate the content of three files and then redirect the output to a fourth file:
+            cat file1 file2 file3 > file4
+
+        * To pipe the content of three files given as arguments and then sort them in alphabetical order in a new file:
+            cat file1 file2 file3 | sort > file4
+
+
+# Piping:
+     piping is a common technique used in Linux to redirect or chain the content to another destination. The destination could be another program, another file or even an output device such as printer. This is oftenly used when the content of a file are to large so we are bound to pipe the content and direct them somewhere else.
+          
+
+## Move Files In A Directory:
+          Move files in a directory easily in Linux via "mv" command.
+
+mv:
+  The mv command is one of the frequently used commands 
+  which is used to move files and directories. 
+  We can also use this command to rename files and directories.
+   File names or directory names are given as an argument. 
+   If the files given as argument are present in the same directory
+    then you can only rename them, not move them. 
+    The source file name would be renamed as destination file name.
+     You can move multiple files/directories simulatenously using mv command.
+        
+   Syntax: mv [options] [source] [destination]
+ 
+   Options: 
+         -v: Means verbose. It displays information about each file being processed.
+
+         -b: Used to make backup copies of files
+
+         --version: This option is to check the version of the installed program
+
+         -i: Means intercative. This option is only used to warn the user about overwrite issues
+
+Example: 
+     * Rename a file and keep it in the same directory:    
+          mv my_file_1 my_file_2
+          
+     * Move all files, directories from current directory to specified directory. Hint means all:
+            mv * /home/sub-dir/new/
+
+
+## Copying Files in Bash
+
+       cp: 
+        This command is one of the most frequently used commands. It is used to copy files and directories. By default, cp copies files but not directories. Always be careful while choosing name for new files because the content might be lost if you use a file name that already exists.
+
+  Syntax:   cp [option] [file_name] new_file_name
+    
+  # Options: 
+        -r or -R: Means Recursive. It is used to copy directories including all its content
+
+        -i: This option is only used to warn the user about overwrite issues
+
+        -f: Means Force. This option is used to force open the destination files
+
+        -u: Means Update. As the name suggests, it only updates the file if any changes are made in the file
+          
+        -x: This option is to indicate cp to stay on the same file system
+
+ # Example:
+
+      * Copy three files in a different directory simultaneously with the same names:
+             cp file1 file2 file3 my_directory
+
+      * Copy all files from current directory to “my_directory” with only .txt extension:
+             cp *.txt my_directory
+
+      * Copy all files from one directory to another directory using star wildcard:
+             cp my_dir_1/* my_dir_2
+
+ # Wildcards?
+       The above example uses a wildcard character i.e. * to run the command. Wildcards are commonly used in Shell commands. Some of the most frequently used are: ?, #, [] etc. The star wildcard simply means “any” or “every”. Thus, the star wildcard, wherever used, would mean to return “any” of the possible result or object.
+
+
+## Zipping a File in Bash:
+
+    tar:  Tar — short for tape archive is used to convert files in tar format and archive them in a file. An archive format is widely used to store multiple files and transfer them to another system. They can be extracted, once recieved on the second end. We use Tar command for all these purposes.
+
+Syntax:
+       tar [option(s)] [archive_file_name] [file_name(s)]
+
+# Options: 
+      The tar command is one of those rare commands which requires to specify at least one option in order to work properly. Here are a few options commonly used with tar command, you can use them individually or combine them in a single tar command.
+
+       -c: Creates an archive
+       -x: Extracts an archive
+       -f: Create archive with the given name
+       -t: Display the files in archive
+       -z: Creates archive with gzip
+       -r: Update/Add the archive file with new files
+       -v: Verbose
+
+  gzip:
+     Gzip is another file format which could be used to group the files together and compress them in order to save space. Zip and Gzip both file formats are widely used for this purpose. The extension for gzip files is .gz
+
+Syntax:   gzip [option(s)] [file_name(s)]
+
+Options:
+      -k: Compresses the file in its original form
+      -d: Decompresses the gzip file
+      -r: Compresses the file in a folderwise manner and places them in their respective gzip files
+      0-9: Used to set compression levels
+      -v:  Verbose. Displays information about compression
+
+Examples.
+
+    * Compress a file using gzip but keep it in original form:
+             gzip -k myfile.txt
+    * Show the compression details of a file:
+             gzip -l myfile.gz
+
+    * 
+
+
+
+
+
+
+
+    
+
+
+
+
